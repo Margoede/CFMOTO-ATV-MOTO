@@ -1,0 +1,137 @@
+<!-- GOES ATV & Quad · Full-Width Banner (1010×513 Verhältnis) — v2 mit Mobile-Fix -->
+<style>
+  .goes-banner {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1010 / 513;
+    margin: 2rem 0;
+    background:
+      linear-gradient(90deg, rgba(15,15,16,.85) 0%, rgba(15,15,16,.55) 45%, rgba(15,15,16,.2) 100%),
+      url('https://goes-atv-quad.de/assets/images/hero/goes-550-outdoor-trail.jpg') center/cover no-repeat;
+    overflow: hidden;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    color: #fff;
+  }
+  .goes-banner::before {
+    content: "";
+    position: absolute;
+    top: 0; right: 0;
+    width: 6px; height: 100%;
+    background: #FF6B00;
+  }
+  .goes-banner__inner {
+    position: absolute; inset: 0;
+    display: flex; flex-direction: column; justify-content: center;
+    padding: 5% 8%;
+    max-width: 62%;
+  }
+  .goes-banner__eyebrow {
+    display: inline-block;
+    font-size: clamp(.75rem, .9vw, 1rem);
+    font-weight: 700;
+    letter-spacing: .22em; text-transform: uppercase;
+    color: #FF6B00;
+    margin-bottom: 1rem;
+  }
+  .goes-banner__eyebrow::before {
+    content: ""; display: inline-block;
+    width: 36px; height: 2px;
+    background: #FF6B00;
+    margin-right: .75rem; vertical-align: middle;
+    transform: translateY(-2px);
+  }
+  .goes-banner__title {
+    margin: 0 0 .85rem;
+    font-size: clamp(1.8rem, 4.2vw, 4rem);
+    font-weight: 900;
+    line-height: 1.05;
+    letter-spacing: -.01em;
+    text-transform: uppercase;
+  }
+  .goes-banner__title .accent { color: #FF6B00; }
+  .goes-banner__title small {
+    display: block;
+    font-size: .55em; font-weight: 700;
+    letter-spacing: .02em; text-transform: none;
+    color: rgba(255, 255, 255, .85);
+    margin-top: .35em;
+  }
+  .goes-banner__text {
+    margin: 0 0 1.5rem;
+    font-size: clamp(.95rem, 1.3vw, 1.25rem);
+    line-height: 1.55;
+    color: rgba(255, 255, 255, .82);
+    max-width: 42ch;
+  }
+  .goes-banner__cta {
+    display: inline-flex; align-items: center; gap: .65rem;
+    padding: clamp(.75rem, 1vw, 1.1rem) clamp(1.2rem, 1.8vw, 2rem);
+    background: #FF6B00; color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: clamp(.85rem, 1vw, 1.05rem);
+    letter-spacing: .1em; text-transform: uppercase;
+    transition: background .2s ease, transform .2s ease;
+    align-self: flex-start;
+  }
+  .goes-banner__cta:hover {
+    background: #D95800;
+    transform: translateY(-2px);
+    color: #fff;
+  }
+  .goes-banner__cta span { transition: transform .2s ease; }
+  .goes-banner__cta:hover span { transform: translateX(4px); }
+  .goes-banner__logo {
+    position: absolute;
+    bottom: 28px; right: 40px;
+    height: clamp(28px, 3vw, 56px);
+    width: auto;
+    filter: drop-shadow(0 2px 8px rgba(0, 0, 0, .6));
+    opacity: .95;
+  }
+
+  /* ---------- MOBILE FIX (< 640px): aspect-ratio aufheben, Inner sitzt im Fluss ---------- */
+  @media (max-width: 640px) {
+    .goes-banner {
+      aspect-ratio: auto;
+      background:
+        linear-gradient(180deg, rgba(15,15,16,.55) 0%, rgba(15,15,16,.85) 70%, rgba(15,15,16,.92) 100%),
+        url('https://goes-atv-quad.de/assets/images/hero/goes-550-outdoor-trail.jpg') center/cover no-repeat;
+    }
+    .goes-banner__inner {
+      position: relative;
+      inset: auto;
+      max-width: 100%;
+      padding: 32px 24px 88px;
+    }
+    .goes-banner__title { font-size: 1.7rem; line-height: 1.15; }
+    .goes-banner__title small { font-size: .68em; margin-top: .5em; }
+    .goes-banner__text { font-size: 1rem; max-width: none; margin-bottom: 1.4rem; }
+    .goes-banner__cta {
+      align-self: stretch;
+      justify-content: center;
+      padding: .95rem 1.4rem;
+      font-size: .9rem;
+    }
+    .goes-banner__logo {
+      bottom: 18px; right: 18px;
+      height: 28px;
+    }
+  }
+</style>
+
+<aside class="goes-banner" role="region" aria-label="GOES ATV & Quad bei Gödecke">
+  <div class="goes-banner__inner">
+    <span class="goes-banner__eyebrow">Neu im Showroom</span>
+    <h2 class="goes-banner__title">
+      Gebaut für <span class="accent">die&nbsp;Arbeit.</span>
+      <small>Geboren fürs Gelände.</small>
+    </h2>
+    <p class="goes-banner__text">Die GOES TERROX-Serie bei Gödecke Auto &amp; Zweirad. Vom kompakten 400er bis zum 86-PS-V-Twin.</p>
+    <a class="goes-banner__cta" href="https://goes-atv-quad.de/" target="_blank" rel="noopener noreferrer">
+      Zu den Modellen <span aria-hidden="true">&rarr;</span>
+    </a>
+  </div>
+  <img decoding="async" class="goes-banner__logo" src="https://goes-atv-quad.de/assets/logo/goes-logo.svg" alt="GOES" />
+</aside>

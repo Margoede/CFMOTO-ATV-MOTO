@@ -13,3 +13,9 @@ royalenfield/
 Thumbs.db
 desktop.ini
 *~
+
+# Showcase-Material (nicht im Deploy)
+Images/Gen4/
+
+# Backup der unkomprimierten Original-Bilder
+_originals/

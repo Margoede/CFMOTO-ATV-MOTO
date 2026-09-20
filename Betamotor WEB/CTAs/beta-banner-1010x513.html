@@ -1,0 +1,139 @@
+<!-- BETA Motorcycles · Full-Width Banner für www.auto-zweirad-goedecke.de — v2 mit Mobile-Fix -->
+<style>
+  .beta-banner {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1010 / 513;
+    margin: 2rem 0;
+    background:
+      linear-gradient(90deg, rgba(10,10,10,.82) 0%, rgba(10,10,10,.5) 45%, rgba(10,10,10,.15) 100%),
+      url('https://goedecke-beta-motor.de/assets/images/hero/beta%20motorsport%20enduro%20sand.jpg') center/cover no-repeat;
+    overflow: hidden;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    color: #fff;
+  }
+  .beta-banner::before {
+    content: "";
+    position: absolute;
+    top: 0; right: 0;
+    width: 6px; height: 100%;
+    background: #E2001A;
+  }
+  .beta-banner__inner {
+    position: absolute; inset: 0;
+    display: flex; flex-direction: column; justify-content: center;
+    padding: 5% 8%;
+    max-width: 62%;
+  }
+  .beta-banner__eyebrow {
+    display: inline-block;
+    font-size: clamp(.75rem, .9vw, 1rem);
+    font-weight: 700;
+    letter-spacing: .22em; text-transform: uppercase;
+    color: #E2001A;
+    margin-bottom: 1rem;
+  }
+  .beta-banner__eyebrow::before {
+    content: ""; display: inline-block;
+    width: 36px; height: 2px;
+    background: #E2001A;
+    margin-right: .75rem; vertical-align: middle;
+    transform: translateY(-2px);
+  }
+  .beta-banner__title {
+    margin: 0 0 .85rem;
+    font-size: clamp(1.8rem, 4.2vw, 4rem);
+    font-weight: 900;
+    line-height: 1.05;
+    letter-spacing: -.01em;
+    text-transform: uppercase;
+  }
+  .beta-banner__title .accent { color: #E2001A; }
+  .beta-banner__title small {
+    display: block;
+    font-size: .55em; font-weight: 700;
+    letter-spacing: .02em; text-transform: none;
+    color: rgba(255, 255, 255, .85);
+    margin-top: .35em;
+  }
+  .beta-banner__text {
+    margin: 0 0 1.5rem;
+    font-size: clamp(.95rem, 1.3vw, 1.25rem);
+    line-height: 1.55;
+    color: rgba(255, 255, 255, .85);
+    max-width: 42ch;
+  }
+  .beta-banner__cta {
+    display: inline-flex; align-items: center; gap: .65rem;
+    padding: clamp(.75rem, 1vw, 1.1rem) clamp(1.2rem, 1.8vw, 2rem);
+    background: #E2001A; color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: clamp(.85rem, 1vw, 1.05rem);
+    letter-spacing: .1em; text-transform: uppercase;
+    transition: background .2s ease, transform .2s ease;
+    align-self: flex-start;
+  }
+  .beta-banner__cta:hover {
+    background: #B3001A;
+    transform: translateY(-2px);
+    color: #fff;
+  }
+  .beta-banner__cta span { transition: transform .2s ease; }
+  .beta-banner__cta:hover span { transform: translateX(4px); }
+  .beta-banner__logo {
+    position: absolute;
+    bottom: 28px; right: 40px;
+    height: clamp(28px, 3vw, 56px);
+    width: auto;
+    filter: drop-shadow(0 2px 8px rgba(0, 0, 0, .6));
+    opacity: .95;
+  }
+
+  /* ---------- MOBILE FIX (< 640px): aspect-ratio aufheben, Inner sitzt im Fluss ---------- */
+  @media (max-width: 640px) {
+    .beta-banner {
+      aspect-ratio: auto;
+      background:
+        linear-gradient(180deg, rgba(10,10,10,.55) 0%, rgba(10,10,10,.82) 70%, rgba(10,10,10,.9) 100%),
+        url('https://goedecke-beta-motor.de/assets/images/hero/beta%20motorsport%20enduro%20sand.jpg') center/cover no-repeat;
+    }
+    .beta-banner__inner {
+      position: relative;
+      inset: auto;
+      max-width: 100%;
+      padding: 72px 24px 32px;
+    }
+    .beta-banner__title { font-size: 1.7rem; line-height: 1.15; }
+    .beta-banner__title small { font-size: .68em; margin-top: .5em; }
+    .beta-banner__text { font-size: 1rem; max-width: none; margin-bottom: 1.4rem; }
+    .beta-banner__cta {
+      align-self: stretch;
+      justify-content: center;
+      padding: .95rem 1.4rem;
+      font-size: .9rem;
+    }
+    .beta-banner__logo {
+      bottom: auto;
+      top: 20px;
+      right: 20px;
+      height: 26px;
+    }
+  }
+</style>
+
+<aside class="beta-banner" role="region" aria-label="BETA Motor von Gödecke">
+  <div class="beta-banner__inner">
+    <span class="beta-banner__eyebrow">Handmade italienisch</span>
+    <h2 class="beta-banner__title">
+      Seit 1905 <span class="accent">italienische Leidenschaft.</span>
+      <small>Beta Motorrad Händler Auto &amp; Zweirad Gödecke.</small>
+    </h2>
+    <p class="beta-banner__text">Young Enduro, Supermoto und Adventure — präzise, authentisch und unverwechselbar. Entdecke die aktuellen Beta-Modelle.</p>
+    <a class="beta-banner__cta" href="https://goedecke-beta-motor.de/" target="_blank" rel="noopener noreferrer">
+      Zu den Modellen <span aria-hidden="true">&rarr;</span>
+    </a>
+  </div>
+  <img decoding="async" class="beta-banner__logo" src="https://goedecke-beta-motor.de/assets/logo/betamoto-logo-white.png.png" alt="BETA Motorcycles" />
+</aside>
