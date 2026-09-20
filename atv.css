@@ -171,6 +171,11 @@
   background: #3b82f6;
 }
 
+.atv-card-badge.badge-kinder {
+  background: #f59e0b;
+  color: #1a1a1a;
+}
+
 .atv-card-badge.badge-premium {
   background: var(--cf-accent);
   color: var(--cf-dark);
